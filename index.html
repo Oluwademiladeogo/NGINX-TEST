@@ -3,29 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimal Frontend</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Complex Frontend</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #000428, #004e92);
+            color: #fff;
+        }
+
+        header {
+            background-color: #000428;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #000428;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            main {
+                padding: 1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+
+        .animated-button {
+            background-color: #004e92;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            animation: bounce 2s infinite;
+        }
+
+        .animated-button:hover {
+            background-color: #002f6c;
+        }
+
+        .content-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: white;
+            color: #000428;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .content-section:nth-child(even) {
+            animation: slideIn 1s ease-out;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Complex Frontend</h1>
     </header>
     <main>
-        <section class="welcome">
-            <h1>Welcome to Minimal Frontend</h1>
-            <p>Your journey into minimalistic design starts here. Explore our pages to learn more about us and get in touch!</p>
-            <button class="animated-button">Get Started</button>
+        <section class="content-section fade-in">
+            <h2>Welcome to _thebickersteth</h2>
+            <p>Experience the beauty.</p>
+        </section>
+        <section class="content-section slide-in">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of services to meet your needs. Explore our offerings and find out how we can help you.</p>
+        </section>
+        <section class="content-section fade-in">
+            <h2>About Us</h2>
+            <p>Learn more about our team and our mission. We are dedicated to providing the best service possible.</p>
+        </section>
+        <section class="content-section slide-in">
+            <h2>Contact Us</h2>
+            <p>Have questions? Get in touch with us and we'll be happy to assist you.</p>
+            <button class="animated-button">Contact Us</button>
         </section>
     </main>
     <footer>
-        <p>&copy; 2023 Minimal Frontend. All rights reserved.</p>
+        <p>&copy; 2025 _thebickersteth. All rights reserved.</p>
     </footer>
-    <script src="js/scripts.js"></script>
 </body>
 </html>
